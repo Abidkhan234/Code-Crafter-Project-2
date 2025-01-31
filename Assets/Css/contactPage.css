@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:wght@400;500;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+:root {
+    --primary-color: #B88E2F;
+}
+
+/* Page-loader start */
+
+.page-loader {
+    z-index: 5;
+    background-color: #FAF3EA;
+}
+
+.page-loader .loader {
+    border: 10px solid lightgray;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: rotate 1s linear 0s infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Page-loader end*/
+
+/* Navbar start */
+
+nav .nav-logo h2 {
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+}
+
+nav .nav-menu ul li a {
+    font-weight: 500;
+}
+
+nav .nav-icons i {
+    font-size: 19px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.side-nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+    width: 320px;
+    align-items: center;
+    text-align: center;
+    transition: all 1s;
+    z-index: 3;
+}
+
+.side-nav-menu-open {
+    transform: translate(0%, 0);
+}
+
+#nav-cross {
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: red;
+}
+
+#nav-bar {
+    display: none;
+}
+
+/* For Cart */
+
+nav .nav-icons span {
+    top: 50%;
+    left: 60%;
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    align-content: center;
+    border-radius: 50%;
+}
+
+/* For Cart */
+
+/* For Cart list */
+
+.cart-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 500px;
+    transition: all 1s;
+    z-index: 5;
+    background-color: #eee;
+    transform: translateY(-100%);
+    border-bottom-left-radius: 5px;
+}
+
+.cart-list-open {
+    transform: translateY(0);
+}
+
+.cart-top {
+    border-bottom: 1px solid #898989;
+}
+
+.cart-list-close i {
+    top: 7px;
+    left: 5px;
+    font-size: 16px;
+    color: #898989;
+    cursor: pointer;
+}
+
+.cart-content {
+    height: 100%;
+    max-height: 300px;
+}
+
+.cart-content .item .item-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.cart-content .item .item-info i {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #898989;
+    color: white;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cart-content .item .item-info .item-quantity-info input {
+    width: 20%;
+    outline: none;
+    border: none;
+    padding-left: 5px;
+    background-color: white;
+}
+
+.cart-content .item .item-info .item-quantity-info p {
+    color: var(--primary-color);
+}
+
+.cart-bottom span {
+    color: var(--primary-color);
+}
+
+.cart-bottom button {
+    padding: 5px 20px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 20px;
+}
+
+/* For Cart list */
+
+/* For Navbar */
+
+@media (max-width:992px) {
+    .nav-menu {
+        display: none;
+    }
+
+    #nav-bar {
+        display: inline;
+    }
+}
+
+@media (max-width:767px) {
+    .side-nav-menu {
+        width: 250px;
+    }
+
+}
+
+@media (max-width:425px) {
+    nav .nav-icons i {
+        padding: 2px;
+    }
+
+    .side-nav-menu {
+        width: 100%;
+    }
+
+    .cart-bottom button:nth-child(3) {
+        flex: 1;
+    }
+
+    .cart-content {
+        max-height: 225px;
+    }
+}
+
+/* For Navbar */
+
+/* Navbar end */
+
+/* hero-section start */
+
+.hero-section {
+    background-image: url(../Images/contact/hero-section/hero-section-image.png);
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+}
+
+.hero-section .hero-info-box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* hero-section end */
+
+/* contact-section start */
+
+.heading p {
+    color: #666666;
+    width: 70%;
+}
+
+.heading h3 {
+    color: #333;
+}
+
+.contact-inputs input {
+    border: 1px solid #9F9F9F;
+    outline: none;
+}
+
+.contact-inputs textarea {
+    resize: none;
+    outline: none;
+}
+
+.contact-inputs .contact-submit-btn button {
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* For contact */
+
+@media (max-width:767px) {
+    .heading p {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* For contact */
+
+/* contact-section end */
+
+/* Warranty-section start */
+
+
+
+/* Warranty-section  end*/
+
+
+/* footer start */
+
+footer {
+    border-top: 1px solid #666666;
+    padding: 20px 0;
+}
+
+.footer-content-1,
+.footer-content-2,
+.footer-content-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-content-1 h4,
+.footer-content-2 h4,
+.footer-content-3 h4 {
+    color: #9F9F9F;
+}
+
+
+.footer-content-3 .input-field input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    padding: 5px 10px 5px 0;
+}
+
+.footer-content-3 .input-field button {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.copy-right-content {
+    border-top: 1px solid #666666;
+    padding: 10px;
+}
+
+/* For footer */
+
+@media (max-width:550px) {
+
+    .footer-content-1,
+    .footer-content-2,
+    .footer-content-3 {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* For footer */
+
+/* footer end */
+.sec-last-head {
+    background-color: #FAF3EA;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    width: 100%;
+
+}
