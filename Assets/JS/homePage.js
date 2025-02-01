@@ -65,13 +65,13 @@ const productData = (event) => {
     const productPrice = event.querySelector(".card-bottom p").innerText;
     const productImage = event.querySelector(".card-top img").src;
 
-    const productDataObj = JSON.parse(sessionStorage.getItem("productData")) || [];
-
-    productDataObj.unshift({
-        imageSrc: `${productImage}`,
-        title: `${productTitle}`,
-        price: `${productPrice}`
-    })
+    const productDataObj = [
+        {
+            imageSrc: `${productImage}`,
+            title: `${productTitle}`,
+            price: `${productPrice}`
+        }
+    ];
 
     sessionStorage.setItem("productData", JSON.stringify(productDataObj));
 
